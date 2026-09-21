@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-400: #38bdf8;
+  --color-brand-500: #0ea5e9;
+  --color-brand-600: #0284c7;
+  --color-brand-700: #0369a1;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #f0f9ff;
+  color: #1e293b;
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes pulse-border {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 0 rgba(14, 165, 233, 0.35),
+      0 4px 14px rgba(14, 165, 233, 0.15);
+  }
+  50% {
+    box-shadow:
+      0 0 0 4px rgba(14, 165, 233, 0.2),
+      0 4px 20px rgba(56, 189, 248, 0.3);
+  }
+}
+
+@keyframes logo-shimmer {
+  0%,
+  100% {
+    box-shadow:
+      0 4px 14px rgba(56, 189, 248, 0.28),
+      inset 0 1px 0 rgba(255, 255, 255, 0.45);
+  }
+  50% {
+    box-shadow:
+      0 4px 22px rgba(103, 232, 249, 0.35),
+      0 0 18px rgba(125, 211, 252, 0.25),
+      inset 0 1px 0 rgba(255, 255, 255, 0.55);
+  }
+}
+
+.logo-mark {
+  animation: logo-shimmer 3.5s ease-in-out infinite;
+}
+
+.animate-pulse-border {
+  animation: pulse-border 2.5s ease-in-out infinite;
+}
