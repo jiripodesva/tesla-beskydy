@@ -4,54 +4,54 @@
  */
 export const IMAGES = {
   hero: {
-    src: "/images/hero.jpg",
-    alt: "Tesla Model Y v Beskydech — hlavní fotografie",
+    src: "/images/hero-spani-v-tesle.jpg",
+    alt: "Tesla Model Y připravená na spaní v Beskydech",
     placeholderLabel: "Hero pozadí",
   },
   whiteExterior: {
-    src: "/images/exterior-hlavni.jpg",
+    src: "/images/tesla-model-y-profil.jpg",
     alt: "Bílá Tesla Model Y — prémiový vůz pro pronájem",
     placeholderLabel: "Exteriér vozu",
   },
   campingSleep: {
-    src: "/images/spani-hlavni.jpg",
+    src: "/images/hero-spani-v-tesle.jpg",
     alt: "Spaní v Tesle — matrace a výhled na hvězdy",
     placeholderLabel: "Spaní v Tesle",
   },
   interior: {
-    src: "/images/interior-detail.jpg",
-    alt: "Interiér Tesla Model Y",
-    placeholderLabel: "Interiér",
+    src: "/images/tesla-logo-detail.jpg",
+    alt: "Detail loga Tesla na karoserii",
+    placeholderLabel: "Detail Tesla",
   },
   panoramic: {
-    src: "/images/panoramicke-sklo.jpg",
-    alt: "Panoramatické sklo Tesla — výhled na oblohu",
-    placeholderLabel: "Panoramatické sklo",
+    src: "/images/tesla-nabijeni.jpg",
+    alt: "Tesla Model Y při nabíjení před cestou",
+    placeholderLabel: "Nabíjení",
   },
   serviceCamping: {
-    src: "/images/sluzba-glamping.jpg",
+    src: "/images/hero-spani-v-tesle.jpg",
     alt: "Spaní v Tesle — glamping",
     placeholderLabel: "Glamping",
   },
   serviceDrive: {
-    src: "/images/sluzba-pronajem.jpg",
+    src: "/images/tesla-model-y-profil.jpg",
     alt: "Krátkodobý pronájem Tesla — zážitkové jízdy",
     placeholderLabel: "Zážitkové jízdy",
   },
-  serviceLightShow: {
-    src: "/images/sluzba-light-show.jpg",
-    alt: "Tesla Light Show — světelná show",
-    placeholderLabel: "Light Show",
+  serviceEvent: {
+    src: "/images/tesla-logo-detail.jpg",
+    alt: "Detail Tesly pro svatbu nebo firemní den",
+    placeholderLabel: "Svatba / firemní den",
   },
   forest: {
-    src: "/images/beskydy-krajina.jpg",
+    src: "/images/hero-spani-v-tesle.jpg",
     alt: "Tesla v beskydské přírodě",
     placeholderLabel: "Krajina",
   },
   night: {
-    src: "/images/light-show-noc.jpg",
-    alt: "Tesla Light Show v noci",
-    placeholderLabel: "Light Show",
+    src: "/images/tesla-nabijeni.jpg",
+    alt: "Tesla připravená a nabitá na akci",
+    placeholderLabel: "Svatba / firemní den",
   },
 } as const;
 

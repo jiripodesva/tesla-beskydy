@@ -9,6 +9,9 @@ export default defineConfig(({ mode }) => {
 
   return {
     base,
+    server: {
+      allowedHosts: true,
+    },
     plugins: [
       react(),
       tailwindcss(),

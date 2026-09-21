@@ -4,11 +4,6 @@ export const SITE = {
   url: import.meta.env.VITE_SITE_URL ?? "https://teslabeskydy.cz",
   phone: "+420739576989",
   phoneDisplay: "+420 739 576 989",
-  email: "napis@teslabeskydy.cz",
-  address: {
-    street: "Velké Karlovice 1188",
-    zip: "756 06 Velké Karlovice",
-  },
 } as const;
 
 export function whatsAppContactUrl(message?: string): string {
@@ -20,6 +15,6 @@ export function whatsAppContactUrl(message?: string): string {
 
 export function whatsAppShareUrl(pageUrl?: string): string {
   const url = pageUrl ?? SITE.url;
-  const text = `${SITE.name} — spaní v Tesle, zážitkové jízdy a Light Show v Beskydech. ${url}`;
+  const text = `${SITE.name} — spaní v Tesle, zážitkové jízdy, svatby a firemní dny v Beskydech. ${url}`;
   return `https://wa.me/?text=${encodeURIComponent(text)}`;
 }

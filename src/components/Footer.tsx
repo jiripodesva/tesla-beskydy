@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Mail, MapPin, Phone, Share2, Youtube } from "lucide-react";
+import { Facebook, Instagram, Phone, Share2, Youtube } from "lucide-react";
 import { SITE, whatsAppContactUrl, whatsAppShareUrl } from "../config/site";
 
 function WhatsAppIcon({ className }: { className?: string }) {
@@ -31,8 +31,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold text-slate-900">Tesla Beskydy</h3>
             <p className="mt-4 text-sm leading-relaxed text-slate-600">
-              Spaní v Tesle, krátkodobý pronájem na zážitkové jízdy a Tesla
-              Light Show pro oslavy — ekologický luxus přímo ve Velkých
+              Spaní v Tesle, krátkodobý pronájem na zážitkové jízdy a pronájem na svatby a firemní dny — ekologický luxus přímo ve Velkých
               Karlovicích.
             </p>
             <a
@@ -51,23 +50,6 @@ export default function Footer() {
               Kontakt
             </h4>
             <ul className="mt-4 space-y-3 text-sm text-slate-600">
-              <li className="flex items-start gap-3">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-sky-600" />
-                <span>
-                  {SITE.address.street}
-                  <br />
-                  {SITE.address.zip}
-                </span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Mail className="h-4 w-4 shrink-0 text-sky-600" />
-                <a
-                  href={`mailto:${SITE.email}`}
-                  className="transition hover:text-sky-700"
-                >
-                  {SITE.email}
-                </a>
-              </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-4 w-4 shrink-0 text-sky-600" />
                 <a

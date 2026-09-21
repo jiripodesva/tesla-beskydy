@@ -41,7 +41,7 @@ Settings → **Secrets and variables** → **Actions** → **New repository secr
 
 | Název | Hodnota |
 |-------|---------|
-| `VITE_FORMSPREE_FORM_ID` | `xkoeaynr` |
+| `VITE_FORMSPREE_FORM_ID` | `mdekgenr` |
 
 Pak **Actions** → poslední workflow → **Re-run all jobs**.
 

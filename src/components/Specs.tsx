@@ -1,11 +1,9 @@
 import {
   BatteryCharging,
-  EyeOff,
+  Bot,
   MonitorPlay,
   Thermometer,
 } from "lucide-react";
-import { IMAGES } from "../data/images";
-import SiteImage from "./SiteImage";
 
 const SPECS = [
   {
@@ -21,10 +19,10 @@ const SPECS = [
       "Sledujte Netflix, YouTube nebo hrajte hry na 15\" displeji přímo z vyhřívané postele.",
   },
   {
-    icon: EyeOff,
-    title: "Blackout soukromí",
+    icon: Bot,
+    title: "Chytré funkce a AI",
     description:
-      "Kompletní sada zatemňovacích clon pro všechna okna zaručuje absolutní intimitu.",
+      "Vyzkoušíte ovládání funkcí vozu přes umělou inteligenci, hlasové pokyny a moderní technologie Tesly.",
   },
   {
     icon: BatteryCharging,
@@ -51,15 +49,6 @@ export default function Specs() {
           <p className="mt-4 text-slate-600">
             Vše pro dokonalou noc v přírodě — bez kompromisů.
           </p>
-        </div>
-
-        <div className="mt-12 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-          <SiteImage
-            src={IMAGES.panoramic.src}
-            alt={IMAGES.panoramic.alt}
-            placeholderLabel={IMAGES.panoramic.placeholderLabel}
-            className="aspect-[21/9] w-full object-cover"
-          />
         </div>
 
         <div className="mt-16 grid gap-6 sm:grid-cols-2">

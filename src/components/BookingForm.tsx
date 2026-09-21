@@ -267,7 +267,7 @@ export default function BookingForm() {
                   rows={4}
                   disabled={submitting}
                   className="w-full resize-none rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-slate-900 outline-none transition focus:border-sky-500 focus:bg-white focus:ring-2 focus:ring-sky-500/20 disabled:opacity-60"
-                  placeholder="Např. Light Show k narozeninám, snídaňový koš s frgály…"
+                  placeholder="Např. příjezd nevěsty, firemní den, ukázka AI funkcí vozu, snídaňový koš s frgály…"
                 />
               </div>
 

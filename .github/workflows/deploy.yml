@@ -31,7 +31,7 @@ jobs:
         env:
           VITE_BASE_PATH: /${{ github.event.repository.name }}/
           VITE_SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
-          VITE_FORMSPREE_FORM_ID: ${{ secrets.VITE_FORMSPREE_FORM_ID }}
+          VITE_FORMSPREE_FORM_ID: mdekgenr
         run: npm run build
 
       - uses: actions/upload-pages-artifact@v3

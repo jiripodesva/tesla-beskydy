@@ -5,7 +5,6 @@ import SiteImage from "./SiteImage";
 const FEATURES = [
   "Sklopená zadní sedadla + matrace Snoozu/Tesmat",
   "Camp Mode — tichá klima celou noc (~1 %/h)",
-  "Zatemnění oken pro absolutní soukromí",
   "Výhled na hvězdy přes panoramatické sklo",
 ];
 
@@ -25,14 +24,6 @@ export default function SleepingShowcase() {
                 placeholderLabel={IMAGES.campingSleep.placeholderLabel}
                 className="aspect-[4/3] w-full object-cover"
                 loading="eager"
-              />
-            </div>
-            <div className="absolute -bottom-4 -right-4 hidden overflow-hidden rounded-xl border border-slate-200 bg-white shadow-lg sm:block md:-bottom-6 md:-right-6 md:w-48">
-              <SiteImage
-                src={IMAGES.interior.src}
-                alt={IMAGES.interior.alt}
-                placeholderLabel={IMAGES.interior.placeholderLabel}
-                className="aspect-square w-full object-cover"
               />
             </div>
           </div>

@@ -1,4 +1,4 @@
-import { Moon, Sparkles, Zap } from "lucide-react";
+import { BriefcaseBusiness, Moon, Zap } from "lucide-react";
 import { IMAGES } from "../data/images";
 import { OTHER_PLANS, GLAMPING_PLANS } from "../data/plans";
 import SiteImage from "./SiteImage";
@@ -6,7 +6,7 @@ import SiteImage from "./SiteImage";
 const glampingNoc = GLAMPING_PLANS.find((p) => p.id === "noc")!;
 const glampingVikend = GLAMPING_PLANS.find((p) => p.id === "vikend")!;
 const jizdaPlan = OTHER_PLANS.find((p) => p.id === "jizda")!;
-const lightShowPlan = OTHER_PLANS.find((p) => p.id === "lightshow")!;
+const eventPlan = OTHER_PLANS.find((p) => p.id === "akce")!;
 
 const SERVICES = [
   {
@@ -29,18 +29,18 @@ const SERVICES = [
     accent: "from-blue-50 to-white",
     border: "hover:border-blue-300",
     iconBg: "bg-blue-100 text-blue-700",
-    copy: "Pronajměte si Teslu na pár hodin a vyzkoušejte zrychlení i autopilota na trasách kolem Soláně nebo Kohútky. Ideální jako dárek nebo zpestření pobytu ve Valašsku.",
+    copy: "Pronajměte si Teslu na pár hodin a vyzkoušejte zrychlení, autopilota i ovládání funkcí vozu přes umělou inteligenci. Ukážeme chytré funkce, hlasové ovládání a moderní technologie na trasách kolem Soláně nebo Kohútky.",
   },
   {
-    icon: Sparkles,
-    title: lightShowPlan.name,
-    priceHint: `${lightShowPlan.price} ${lightShowPlan.priceUnit}`,
-    image: IMAGES.serviceLightShow,
-    planLink: "#rezervace?sluzba=lightshow",
+    icon: BriefcaseBusiness,
+    title: eventPlan.name,
+    priceHint: `${eventPlan.price} · ${eventPlan.priceUnit}`,
+    image: IMAGES.serviceEvent,
+    planLink: "#rezervace?sluzba=akce",
     accent: "from-cyan-50 to-white",
     border: "hover:border-cyan-300",
     iconBg: "bg-cyan-100 text-cyan-700",
-    copy: "Hudebně synchronizovaná světelná show z Tesly — narozeniny, svatba, firemní oslava nebo romantické překvapení. Show připravíme na míru.",
+    copy: "Tesla jako stylový prvek svatby nebo firemního dne: příjezd nevěsty, fotky s vozem, možnost Light Show a technická zábava pro svatební hosty nebo tým.",
   },
 ];
 

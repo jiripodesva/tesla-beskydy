@@ -50,7 +50,7 @@ export default function Hero() {
 
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-600 sm:text-xl">
             Spaní v Tesle, krátkodobý pronájem na zážitkové jízdy a
-            dechberoucí Light Show — bílá Tesla Model Y ve Velkých Karlovicích.
+            pronájem na svatbu nebo firemní den — bílá Tesla Model Y ve Velkých Karlovicích.
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">

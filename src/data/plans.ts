@@ -1,7 +1,7 @@
 import type { LucideIcon } from "lucide-react";
-import { Moon, Sparkles, Zap } from "lucide-react";
+import { BriefcaseBusiness, Moon, Zap } from "lucide-react";
 
-export type PlanId = "noc" | "vikend" | "jizda" | "lightshow";
+export type PlanId = "noc" | "vikend" | "jizda" | "akce";
 
 export type PricingPlan = {
   id: PlanId;
@@ -22,7 +22,7 @@ export type PricingPlan = {
 };
 
 const GLAMPING_FEATURES = [
-  "Prémiový kempingový set (matrace, zatemnění, povlečení)",
+  "Prémiový kempingový set (matrace a povlečení)",
   "Camp Mode pod hvězdami",
 ];
 
@@ -67,6 +67,8 @@ export const PRICING_PLANS: PricingPlan[] = [
     features: [
       "Krátkodobý pronájem Tesla Model Y",
       "Instruktáž a bezpečnostní briefing",
+      "Ovládání funkcí vozu přes umělou inteligenci",
+      "Vyzkoušení chytrých funkcí, hlasového ovládání a moderních technologií",
       "Jízdy po malebných trasách v Beskydech",
     ],
     cta: "Objednat jízdu",
@@ -77,21 +79,22 @@ export const PRICING_PLANS: PricingPlan[] = [
     formLabel: "Zážitková jízda (990 Kč / hod)",
   },
   {
-    id: "lightshow",
-    name: "Tesla Light Show",
-    price: "490 Kč",
-    priceUnit: "za 15 minut",
+    id: "akce",
+    name: "Svatba nebo firemní den",
+    price: "Individuálně",
+    priceUnit: "podle rozsahu akce",
     features: [
-      "Hudebně synchronizovaná světelná show",
-      "Narozeniny, svatba, firemní oslavy",
-      "Program na míru vaší akci",
+      "Pronájem Tesly na svatbu nebo firemní den",
+      "Příjezd nevěsty nebo ženicha ve stylovém voze",
+      "Možnost využít Tesla Light Show jako doprovodný efekt",
+      "Zábava a technický zážitek pro svatební hosty nebo tým",
     ],
-    cta: "Poptat Light Show",
-    icon: Sparkles,
+    cta: "Poptat akci",
+    icon: BriefcaseBusiness,
     accent: "from-cyan-50 to-white",
     border: "hover:border-cyan-300",
     iconBg: "bg-cyan-100 text-cyan-700",
-    formLabel: "Tesla Light Show (490 Kč / 15 min)",
+    formLabel: "Svatba / firemní den — individuální nabídka",
   },
 ];
 
@@ -100,7 +103,7 @@ export const GLAMPING_PLANS = PRICING_PLANS.filter((p) =>
 );
 
 export const OTHER_PLANS = PRICING_PLANS.filter((p) =>
-  ["jizda", "lightshow"].includes(p.id),
+  ["jizda", "akce"].includes(p.id),
 );
 
 export function getPlanById(id: PlanId): PricingPlan | undefined {
