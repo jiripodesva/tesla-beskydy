@@ -4,11 +4,10 @@ import { X } from "lucide-react";
 export default function SupportModal() {
   const [open, setOpen] = useState(() => {
     if (typeof window === "undefined") return true;
-    return sessionStorage.getItem("tesla-beskydy-support-modal-closed") !== "1";
+    return !window.location.hash.startsWith("#rezervace");
   });
 
   function closeModal() {
-    sessionStorage.setItem("tesla-beskydy-support-modal-closed", "1");
     setOpen(false);
   }
 
