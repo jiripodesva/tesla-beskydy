@@ -5,7 +5,7 @@ import SiteImage from "./SiteImage";
 
 const FEATURES = [
   "Sklopená zadní sedadla + matrace a lůžkoviny",
-  "Camp Mode — tichá klima celou noc (~1 %/h)",
+  "Camp Mode — tichá klima celou noc jako v hotelovém pokoji",
   "Výhled na hvězdy přes panoramatické sklo",
 ];
 
