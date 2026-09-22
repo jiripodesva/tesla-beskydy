@@ -31,7 +31,7 @@ export default function SupportModal() {
         </button>
 
         <div className="bg-gradient-to-br from-sky-50 via-white to-yellow-50 p-6 pt-14 sm:p-8 sm:pt-14">
-          <div className="mx-auto mb-5 flex h-28 w-28 rotate-[-7deg] flex-col items-center justify-center overflow-hidden rounded-full border-2 border-sky-700/70 bg-white text-sky-950 shadow-md">
+          <div className="mx-auto mb-5 flex h-28 w-28 flex-col items-center justify-center overflow-hidden rounded-full border-2 border-sky-700/70 bg-white text-sky-950 shadow-md">
             <div className="flex h-1/2 w-full items-end justify-center bg-[#0057B7] pb-1 text-yellow-300">
               <span className="text-3xl font-black leading-none tracking-widest">FCK</span>
             </div>
