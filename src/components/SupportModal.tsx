@@ -51,10 +51,6 @@ export default function SupportModal() {
             Pronájmem naší Tesly tak přispějete na dobrou věc — místo koupě
             ruské nafty pomůžete statečným ukrajinským obráncům získat zbraně.
           </p>
-          <p className="mt-3 text-center text-sm text-slate-600">
-            Nelíbí se vám to? Nevadí. Máte právo na svůj názor. Klidně si můžete
-            jinde půjčit například nějaké ruské elektroauto.
-          </p>
 
           <button
             type="button"
