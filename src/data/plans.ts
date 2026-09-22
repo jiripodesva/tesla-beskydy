@@ -22,7 +22,7 @@ export type PricingPlan = {
 };
 
 const GLAMPING_FEATURES = [
-  "Prémiový kempingový set (matrace a povlečení)",
+  "Prémiový kempingový set (matrace a lůžkoviny)",
   "Camp Mode pod hvězdami",
 ];
 

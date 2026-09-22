@@ -4,7 +4,7 @@ import { handleReservationClick, reservationHref } from "../utils/reservation";
 import SiteImage from "./SiteImage";
 
 const FEATURES = [
-  "Sklopená zadní sedadla + matrace, povlečení, polštář a peřina",
+  "Sklopená zadní sedadla + matrace a lůžkoviny",
   "Camp Mode — tichá klima celou noc (~1 %/h)",
   "Výhled na hvězdy přes panoramatické sklo",
 ];
