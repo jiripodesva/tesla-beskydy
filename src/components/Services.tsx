@@ -19,7 +19,7 @@ const SERVICES = [
     accent: "from-sky-50 to-white",
     border: "hover:border-sky-300",
     iconBg: "bg-sky-100 text-sky-700",
-    copy: "Zapomeňte na klasické hotely. Camp Mode udržuje ideální teplotu celou noc. Spěte na matraci Snoozu/Tesmat s výhledem na hvězdy skrze panoramatické sklo.",
+    copy: "Zapomeňte na klasické hotely. Camp Mode udržuje ideální teplotu celou noc. Spěte na matraci s povlečením, polštářem a peřinou s výhledem na hvězdy skrze panoramatické sklo.",
   },
   {
     icon: Zap,
