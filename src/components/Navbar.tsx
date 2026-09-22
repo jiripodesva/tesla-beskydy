@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, Sparkles, X } from "lucide-react";
+import { reservationHref } from "../utils/reservation";
 
 const NAV_LINKS = [
   { href: "#zazitek", label: "O nás" },
@@ -67,7 +68,7 @@ export default function Navbar() {
         </ul>
 
         <a
-          href="#rezervace"
+          href={reservationHref()}
           className="hidden rounded-full bg-sky-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-sky-700 md:inline-block"
         >
           Rezervovat
@@ -99,7 +100,7 @@ export default function Navbar() {
             ))}
             <li>
               <a
-                href="#rezervace"
+                href={reservationHref()}
                 className="mt-2 block rounded-full bg-sky-600 py-3 text-center font-semibold text-white"
                 onClick={() => setOpen(false)}
               >

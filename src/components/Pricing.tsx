@@ -1,5 +1,6 @@
 import { Check } from "lucide-react";
 import { GLAMPING_PLANS, OTHER_PLANS, type PricingPlan } from "../data/plans";
+import { handleReservationClick, reservationHref } from "../utils/reservation";
 
 function PlanCard({ plan }: { plan: PricingPlan }) {
   const Icon = plan.icon;
@@ -56,7 +57,8 @@ function PlanCard({ plan }: { plan: PricingPlan }) {
       </ul>
 
       <a
-        href={`#rezervace?sluzba=${plan.id}`}
+        href={reservationHref(plan.id)}
+        onClick={handleReservationClick(plan.id)}
         className={`mt-8 block rounded-full py-3.5 text-center text-sm font-semibold transition ${
           plan.highlight
             ? "bg-sky-600 text-white hover:bg-sky-700"

@@ -1,6 +1,7 @@
 import { BriefcaseBusiness, Moon, Zap } from "lucide-react";
 import { IMAGES } from "../data/images";
 import { OTHER_PLANS, GLAMPING_PLANS } from "../data/plans";
+import { handleReservationClick, reservationHref } from "../utils/reservation";
 import SiteImage from "./SiteImage";
 
 const glampingNoc = GLAMPING_PLANS.find((p) => p.id === "noc")!;
@@ -14,7 +15,7 @@ const SERVICES = [
     title: "Spaní v Tesle (Glamping)",
     priceHint: `${glampingNoc.price} / noc · ${glampingVikend.price} / víkend`,
     image: IMAGES.serviceCamping,
-    planLink: "#rezervace?sluzba=noc",
+    planId: "noc" as const,
     accent: "from-sky-50 to-white",
     border: "hover:border-sky-300",
     iconBg: "bg-sky-100 text-sky-700",
@@ -25,7 +26,7 @@ const SERVICES = [
     title: jizdaPlan.name,
     priceHint: `${jizdaPlan.price} ${jizdaPlan.priceUnit}`,
     image: IMAGES.serviceDrive,
-    planLink: "#rezervace?sluzba=jizda",
+    planId: "jizda" as const,
     accent: "from-blue-50 to-white",
     border: "hover:border-blue-300",
     iconBg: "bg-blue-100 text-blue-700",
@@ -36,7 +37,7 @@ const SERVICES = [
     title: eventPlan.name,
     priceHint: `${eventPlan.price} · ${eventPlan.priceUnit}`,
     image: IMAGES.serviceEvent,
-    planLink: "#rezervace?sluzba=akce",
+    planId: "akce" as const,
     accent: "from-cyan-50 to-white",
     border: "hover:border-cyan-300",
     iconBg: "bg-cyan-100 text-cyan-700",
@@ -88,7 +89,8 @@ export default function Services() {
                   {service.copy}
                 </p>
                 <a
-                  href={service.planLink}
+                  href={reservationHref(service.planId)}
+                  onClick={handleReservationClick(service.planId)}
                   className="mt-4 inline-block text-sm font-semibold text-sky-600 transition hover:text-sky-700"
                 >
                   Rezervovat →

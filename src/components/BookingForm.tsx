@@ -5,11 +5,12 @@ import {
   isFormspreeConfigured,
 } from "../config/formspree";
 import { PRICING_PLANS, type PlanId } from "../data/plans";
+import { readPlanFromLocation, RESERVATION_EVENT } from "../utils/reservation";
 
 const VALID_PLAN_IDS = new Set(PRICING_PLANS.map((p) => p.id));
 
 function getPlanFromUrl(): PlanId {
-  const param = new URLSearchParams(window.location.search).get("sluzba");
+  const param = readPlanFromLocation();
   if (param && VALID_PLAN_IDS.has(param as PlanId)) {
     return param as PlanId;
   }
@@ -29,15 +30,27 @@ export default function BookingForm() {
 
     function syncFromHash() {
       if (window.location.hash.startsWith("#rezervace")) {
-        setSelectedPlan(getPlanFromUrl());
+        const planId = readPlanFromLocation();
+        if (planId && VALID_PLAN_IDS.has(planId)) {
+          setSelectedPlan(planId);
+        }
+      }
+    }
+
+    function syncFromReservationEvent(event: Event) {
+      const planId = (event as CustomEvent<{ planId?: PlanId }>).detail?.planId;
+      if (planId && VALID_PLAN_IDS.has(planId)) {
+        setSelectedPlan(planId);
       }
     }
 
     window.addEventListener("hashchange", syncFromHash);
     window.addEventListener("popstate", syncFromHash);
+    window.addEventListener(RESERVATION_EVENT, syncFromReservationEvent);
     return () => {
       window.removeEventListener("hashchange", syncFromHash);
       window.removeEventListener("popstate", syncFromHash);
+      window.removeEventListener(RESERVATION_EVENT, syncFromReservationEvent);
     };
   }, []);
 

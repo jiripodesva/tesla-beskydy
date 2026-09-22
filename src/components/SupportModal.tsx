@@ -2,7 +2,15 @@ import { useState } from "react";
 import { X } from "lucide-react";
 
 export default function SupportModal() {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(() => {
+    if (typeof window === "undefined") return true;
+    return sessionStorage.getItem("tesla-beskydy-support-modal-closed") !== "1";
+  });
+
+  function closeModal() {
+    sessionStorage.setItem("tesla-beskydy-support-modal-closed", "1");
+    setOpen(false);
+  }
 
   if (!open) return null;
 
@@ -16,7 +24,7 @@ export default function SupportModal() {
       <div className="relative w-full max-w-lg overflow-hidden rounded-3xl border border-sky-100 bg-white shadow-2xl">
         <button
           type="button"
-          onClick={() => setOpen(false)}
+          onClick={closeModal}
           className="absolute right-4 top-4 z-10 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-slate-600 shadow-sm ring-1 ring-slate-200 transition hover:bg-slate-100 hover:text-slate-900"
           aria-label="Zavřít okno"
         >
@@ -51,7 +59,7 @@ export default function SupportModal() {
 
           <button
             type="button"
-            onClick={() => setOpen(false)}
+            onClick={closeModal}
             className="mt-7 inline-flex w-full items-center justify-center rounded-full bg-sky-600 px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:bg-sky-700"
           >
             Rozumím, pokračovat na web

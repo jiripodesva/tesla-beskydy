@@ -1,5 +1,6 @@
 import { BedDouble, Moon, Star } from "lucide-react";
 import { IMAGES } from "../data/images";
+import { handleReservationClick, reservationHref } from "../utils/reservation";
 import SiteImage from "./SiteImage";
 
 const FEATURES = [
@@ -54,7 +55,8 @@ export default function SleepingShowcase() {
               ))}
             </ul>
             <a
-              href="#rezervace?sluzba=noc"
+              href={reservationHref("noc")}
+              onClick={handleReservationClick("noc")}
               className="mt-10 inline-flex items-center gap-2 rounded-full bg-sky-600 px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition hover:bg-sky-700"
             >
               <Moon className="h-4 w-4" />

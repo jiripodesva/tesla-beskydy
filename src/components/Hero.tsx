@@ -1,6 +1,7 @@
 import { ChevronDown, Sparkles } from "lucide-react";
 import { USE_CUSTOM_PHOTOS } from "../config/media";
 import { IMAGES } from "../data/images";
+import { reservationHref } from "../utils/reservation";
 import SiteImage from "./SiteImage";
 
 export default function Hero() {
@@ -55,7 +56,7 @@ export default function Hero() {
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
-              href="#rezervace"
+              href={reservationHref()}
               className="animate-pulse-border inline-flex w-full items-center justify-center rounded-full bg-sky-600 px-8 py-4 text-base font-semibold text-white shadow-md transition hover:bg-sky-700 sm:w-auto"
             >
               Rezervovat zážitek
